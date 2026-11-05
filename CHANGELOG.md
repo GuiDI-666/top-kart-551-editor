@@ -13,6 +13,14 @@
 - 增加离线字段映射表缓存，减少重复探测耗时
 - 补充单元测试与样本脱敏测试夹具
 
+## [1.0.1] - 2026-11-05
+
+### 修复
+
+- 移除 `kart551_backend.py` 中未使用的 `re` 导入
+- Ruff 配置：为 `emulate_551.py` 关闭 `F403` / `F405`。unicorn 的寄存器常量有数百个，
+  保留官方推荐的 `from unicorn.x86_const import *` 写法，修复 CI lint 任务失败
+
 ## [1.0.0] - 2026-11-05
 
 首次开源发布。
@@ -43,5 +51,6 @@
 - 已验证 32 位负数、VarInt 长度增减、单记录与三记录改写
 - 249 条非空配重记录、135 条非空防撞记录读写通过
 
-[Unreleased]: https://github.com/GuiDI-666/top-kart-551-editor/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/GuiDI-666/top-kart-551-editor/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/GuiDI-666/top-kart-551-editor/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/GuiDI-666/top-kart-551-editor/releases/tag/v1.0.0

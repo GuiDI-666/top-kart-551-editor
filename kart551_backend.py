@@ -9,7 +9,6 @@ VarInt/逐字段字节置换，未映射数据保持逐字节不变。
 from dataclasses import dataclass
 from pathlib import Path
 import copy
-import re
 import struct
 import sys
 from typing import Dict, Iterable, List
