@@ -1,0 +1,52 @@
+# ---- 游戏原始文件（版权归属原厂，绝不入库）----
+*.dll
+*.exe
+*.bin
+*.pdb
+*.so
+*.dylib
+
+# ---- 游戏服务端 / 客户端数据 ----
+EncryptKart/
+Kart/
+协议模板/
+551明文导出/
+551输出/
+551明文导出.zip
+快照编辑输出/
+
+# ---- 构建产物 ----
+build/
+dist/
+*.spec.bak
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+wheelhouse/
+
+# ---- 分析过程产物 ----
+safe_551_object.bin
+safe_551_decode_events.csv
+*.trace
+*.dump
+
+# ---- 虚拟环境 ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- 编辑器与系统 ----
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ---- 本地配置与日志 ----
+.env
+.env.*
+*.log
+local_settings.py

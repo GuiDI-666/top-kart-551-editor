@@ -1,0 +1,37 @@
+# NOTICE
+
+## 版权与归属
+
+本仓库（Top-Kart 551 赛车属性编辑器）的全部源代码由 GuiDI-666 编写，
+以 MIT License 授权，详见 [LICENSE](LICENSE)。
+
+## 第三方组件
+
+本项目在运行期依赖以下开源组件，其版权归各自作者所有：
+
+| 组件 | 许可证 | 用途 |
+| --- | --- | --- |
+| [pefile](https://github.com/erocarrera/pefile) | MIT | 解析 PE 文件头与节表 |
+| [Capstone](https://github.com/capstone-engine/capstone) | BSD-3-Clause | x86-64 指令反汇编 |
+| [Unicorn](https://github.com/unicorn-engine/unicorn) | GPL-2.0 | CPU 指令级模拟执行 |
+| [Tkinter](https://docs.python.org/3/library/tkinter.html) | PSF | GUI 框架（随 Python 分发） |
+
+> **注意**：Unicorn 采用 GPL-2.0 许可证。本项目以 MIT 发布的是自身源代码；
+> 若你将本项目与 Unicorn 静态链接后分发二进制产物，需自行评估 GPL-2.0 的合规义务。
+> 以独立进程调用 Python 包（本项目的默认用法）不触发该义务。
+
+## 未包含的内容
+
+本仓库**明确不包含**以下内容，且不会通过任何渠道提供：
+
+- 游戏客户端或服务端的原始二进制文件（如 `Top-Kart.dll`、`Network.dll`）
+- 游戏资源、模型、贴图、音频
+- 协议模板文件、`EncryptKart` 数据文件、明文配置数据
+- 任何账号、密钥、服务器地址或运营数据
+
+上述文件的版权归原权利人所有，使用者需自行合法获取。
+
+## 商标
+
+"QQ飞车"、"Top-Kart" 等名称与商标归腾讯公司所有。本项目仅为技术研究用途，
+与腾讯公司无任何关联，不代表、也不被其认可。

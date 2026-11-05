@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "top-kart-551-editor"
+version = "1.0.0"
+description = "基于原版 DLL 语义的 Top-Kart 551 协议赛车参数编辑器"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "GuiDI-666" }]
+keywords = ["top-kart", "qqspeed", "binary-protocol", "unicorn", "reverse-engineering"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Disassemblers",
+]
+dependencies = [
+    "pefile>=2024.8.26",
+    "capstone>=5.0.7",
+    "unicorn>=1.0.2",
+]
+
+[project.optional-dependencies]
+dev = ["pyinstaller>=6.0", "ruff>=0.6.0"]
+
+[project.urls]
+Homepage = "https://github.com/GuiDI-666/top-kart-551-editor"
+Changelog = "https://github.com/GuiDI-666/top-kart-551-editor/blob/main/CHANGELOG.md"
+Issues = "https://github.com/GuiDI-666/top-kart-551-editor/issues"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+# 工具集代码风格偏紧凑（多语句同行、中文注释），CI 只卡真正的错误：
+# F = pyflakes（未定义名、未使用导入），E9 = 语法级错误。
+select = ["F", "E9"]
+ignore = []

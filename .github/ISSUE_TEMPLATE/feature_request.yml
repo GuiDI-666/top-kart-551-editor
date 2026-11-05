@@ -1,0 +1,54 @@
+name: 功能请求
+description: 提出新字段、新能力或改进建议
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提出新字段支持时，**必须**附带验证依据。
+        本项目不接受「猜偏移」的字段，这条规则不会因为需求强烈而放宽。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 请求类型
+      options:
+        - 新增字段支持
+        - 新增/改进功能
+        - 性能优化
+        - 文档改进
+        - 工具链 / 构建
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: 需求背景
+      description: 你遇到了什么具体问题？现有功能为什么不够用？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望方案
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 验证依据（新增字段必填）
+      description: |
+        请提供以下任一或多项：
+        - `Top-Kart.dll` 中转换函数/安全成员的地址与反汇编片段
+        - 多份样本的字段对比结果（值 → 编码字节）
+        - 客户端实测结论与操作步骤
+        
+        没有依据的字段请求会被标记为 `needs-evidence` 并暂停处理。
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 已考虑的其他方案
+    validations:
+      required: false

@@ -1,0 +1,90 @@
+name: Bug 报告
+description: 报告一个可复现的问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请**先确认**下面几点，否则问题很难定位：
+
+        - 已阅读 `README.md` 的「已知限制」一节
+        - 使用的是 1.0.x 版本
+        - 已确认 `Top-Kart.dll` 与目标样本协议版本一致
+
+        ⚠️ **不要**在 Issue 中附带游戏原始文件、运营数据、账号或服务器地址。
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已搜索过现有 Issue，没有重复
+          required: true
+        - label: 我确认问题不是「已知限制」中列出的内容
+          required: true
+        - label: 我不会在本次报告中附带任何版权文件或敏感数据
+          required: true
+  - type: dropdown
+    id: component
+    attributes:
+      label: 受影响组件
+      options:
+        - 密文编辑器（GUI）
+        - 明文快照编辑器（GUI）
+        - kart551_backend（读写后端）
+        - emulate_551（模拟执行）
+        - 命令行工具
+        - 打包 / 构建
+        - 文档
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 项目版本
+      description: 来自 VERSION 文件或 Release 标签
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: 运行环境
+      description: 操作系统、Python 版本、依赖版本
+      placeholder: "Windows 11 24H2 / Python 3.10.5 / pefile 2024.8.26 / capstone 5.0.7 / unicorn 1.0.2"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 越具体越好，包含文件名类型与操作顺序
+      placeholder: |
+        1. 打开密文编辑器
+        2. 选择某份单记录 EncryptKart
+        3. 修改 XXX 字段为 N
+        4. 点击「导出并 DLL 校验」
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 请贴出完整报错栈或控制台输出
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: 补充信息
+      description: |
+        截图（请遮挡路径与文件名）、样本特征（记录数、形态数、字段是否非零）等。
+        若涉及协议偏移，请给出你观察到的相对偏移量。
+    validations:
+      required: false

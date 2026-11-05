@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全问题报告
+    url: https://github.com/GuiDI-666/top-kart-551-editor/security/advisories/new
+    about: 请勿公开提交安全漏洞，使用私密渠道
+  - name: 使用问题与讨论
+    url: https://github.com/GuiDI-666/top-kart-551-editor/discussions
+    about: 安装、配置、原理疑问请走 Discussions
+  - name: 先读文档
+    url: https://github.com/GuiDI-666/top-kart-551-editor#readme
+    about: 多数问题在 README 的「已知限制」与「常见问题」里已有说明

@@ -1,0 +1,23 @@
+# 默认：文本文件按 LF 存储，避免跨平台换行污染
+* text=auto eol=lf
+
+# Python 与文档统一 LF
+*.py   text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.spec text eol=lf
+
+# Windows 专用脚本保留 CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# 二进制文件不做转换
+*.dll  binary
+*.exe  binary
+*.bin  binary
+*.png  binary
+*.jpg  binary
+*.ico  binary
